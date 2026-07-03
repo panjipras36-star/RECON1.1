@@ -15,7 +15,9 @@ Built natively in Python, RECON1.2 prioritizes speed and tactical precision, mak
 
 ---
 
-### 🖥️ Preview
+### 🖥️ Usage Example
+
+Saat kamu menjalankan *tool* ini, ini adalah tampilan *banner* dan cara menggunakannya di terminal:
 
 ```text
    ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗ ██╗  ██╗
@@ -25,17 +27,17 @@ Built natively in Python, RECON1.2 prioritizes speed and tactical precision, mak
    ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║ ██║   ██║
    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═╝   ╚═╝
 
-        RECON TOOL v1.2 // BY NEUROPRASSSSS
+                 RECON TOOL v1.2 // BY NEUROPRASSSSS
 
-[?] Target IP Address -> [TARGET_IP]
+[*] Starting high-speed scan on 192.168.1.1...
 
-[ CORE MENU ]
-1. Scan Standard Ports
-2. Scan Single Specific Port
-3. Define New Target IP
-4. Terminate Session
+[+] Port 22    : OPEN
+[+] Port 80    : OPEN
+[+] Port 443   : OPEN
 
-nrp-recon >
+[*] Scan complete.
+[+] Results saved to scan_results.txt
+
 ```
 🚀 How to Run
 If this is your first time accessing this repository, please clone it to your local machine first:
@@ -51,6 +53,19 @@ Run the scanner:
 ```
 python3 recon.py -t <TARGET_IP>
 ```
+
+🚀 Usage
+
+Basic Scan (Default Ports):
+```
+python3 recon.py -t <TARGET_IP>
+```
+Custom Port Scan & Save Results:
+```
+python3 recon.py -t <TARGET_IP> -p 22,80,443,8080 -o results.txt
+
+```
+
 ⚖️ Disclaimer
 
 RECON1.2 is intended for educational purposes and authorized security testing only. The developer assumes no liability for any misuse, damage, or legal consequences arising from the use of this tool. Use this tool responsibly and strictly within controlled environments.
