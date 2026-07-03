@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://www.kali.org/">
+    <img src="https://img.shields.io/badge/Kali_Linux-268BEE?style=for-the-badge&logo=kali-linux&logoColor=white" alt="Kali Linux">
+  </a>
+</p>
+
 # RECON1.1 // Tactical Network Reconnaissance Suite
 
 RECON11 is a specialized, lightweight network auditing utility engineered for rapid reconnaissance and target surface mapping. Developed with a "zero-dependency" philosophy, this tool is designed to provide security operators and researchers with an efficient way to perform target vector analysis, port enumeration, and service banner identification within complex network environments.
