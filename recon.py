@@ -11,19 +11,33 @@ def display_banner():
     print("   ██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║ ██║   ██║")
     print("   ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║ ██║   ██║")
     print("   ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═╝   ╚═╝")
-    print("                 RECON TOOL v1.2 // BY NEUROPRASSSSS")
+    print("                  RECON TOOL v1.2 // BY NEUROPRASSSSS")
     print("="*60 + "\033[0m\n")
 
 def scan_port(target_ip, port):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(1.0)
-    result = s.connect_ex((target_ip, port))
-    if result == 0:
-        print(f"\033[1;32m[+] Port {port:<5} : OPEN\033[0m")
-        s.close()
-        return port
-    s.close()
-    return None
+    try:
+        
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(1.0)
+        
+      
+        result = s.connect_ex((target_ip, port))
+        
+        if result == 0:
+           
+            print(f"\033[1;32m[+] Port {port:<5} : OPEN\033[0m")
+            s.close()
+            return port
+        else:
+           
+            print(f"[-] Port {port:<5} : CLOSED/FILTERED")
+            s.close()
+            return None
+            
+    except Exception as e:
+        
+        print(f"[!] Error on port {port}: {e}")
+        return None
 
 def main():
     display_banner()
@@ -52,7 +66,6 @@ def main():
         
         print("\n\033[1;34m[*] Scan complete.\033[0m")
         
-    
         if args.output:
             with open(args.output, "w") as f:
                 f.write(f"Scan results for {target}\n")
